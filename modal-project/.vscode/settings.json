@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.mouseWheelZoom": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoClosingDelete": "auto",
+  "editor.autoClosingOvertype": "auto",
+  "html.autoClosingTags": true,
+  "vetur.completion.autoImport": true,
+  "vetur.format.defaultFormatter.html": "prettier"
+}
