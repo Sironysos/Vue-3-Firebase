@@ -11,7 +11,18 @@
       <p>Contenu</p>
     </Modal>
   </div>
+  <div v-if="showModal2">
+    <Modal @close="toggleModal2">
+      <template v-slot:links>
+        <a href="#">Lien 3</a>
+        <a href="#">Lien 4</a>
+      </template>
+      <h1>Titre</h1>
+      <p>Contenu</p>
+    </Modal>
+  </div>
   <button @click="toggleModal()">Open Modal</button>
+  <button @click="toggleModal2()">Open Modal 2</button>
 </template>
 
 <script>
@@ -25,12 +36,16 @@
         title: 'My First Vue App!',
         header: 'This is the header',
         text: 'This is the text',
-        showModal: false
+        showModal: false,
+        showModal2: false
       }
     },
     methods: {
       toggleModal() {
         this.showModal = !this.showModal
+      },
+      toggleModal2() {
+        this.showModal2 = !this.showModal2
       }
     }
   }
