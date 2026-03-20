@@ -1,7 +1,7 @@
 <template>
   <h1>{{ title }}</h1>
   <p>Welcome</p>
-  <div v-if="showModal">
+  <teleport to=".modals" v-if="showModal">
     <Modal theme="sale" @close="toggleModal">
       <template v-slot:links>
         <a href="#">Lien 1</a>
@@ -10,7 +10,7 @@
       <h1>Titre</h1>
       <p>Contenu</p>
     </Modal>
-  </div>
+  </teleport>
   <div v-if="showModal2">
     <Modal @close="toggleModal2">
       <template v-slot:links>
@@ -52,7 +52,8 @@
 </script>
 
 <style>
-  #app {
+  #app,
+  .modals {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
